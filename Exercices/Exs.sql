@@ -47,3 +47,26 @@ SELECT
     *
 FROM admissions
 WHERE discharge_date IS NULL;
+
+
+
+-- LES BONUS :
+-- Exercice 11 avec join:
+SELECT d.department_name, COUNT(*) AS num_doctors FROM doctors doc
+	   JOIN departments d ON doc.department_id = d.department_id 
+       GROUP BY doc.department_id,d.department_name;
+-- Exercice 16
+SELECT concat(d.first_name,' ',d.last_name) AS full_name_doctor ,concat(p.first_name,' ',p.last_name) AS
+    full_name_patient FROM appointments a
+	JOIN doctors d ON a.doctor_id=d.doctor_id
+    JOIN patients p ON a.patient_id = p.patient_id
+-- bonus 1
+SELECT concat(p.first_name,' ',p.last_name) AS full_name_patient, 
+	   concat(d.first_name,' ',d.last_name) AS his_doctor
+       FROM prescriptions pre
+	   JOIN doctors d ON pre.doctor_id=d.doctor_id
+       JOIN patients p ON pre.patient_id = p.patient_id
+       GROUP BY d.first_name,p.first_name;
+-- bonus 2
+       
+       
