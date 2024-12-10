@@ -11,7 +11,8 @@ SELECT * FROM `doctors` LIMIT 3;
 -- Exercice 6
 SELECT * FROM `patients` WHERE date_of_birth>'2000-01-01';
 -- Exercice 7
-SELECT * FROM `doctors` WHERE specialization='Cardiologist' OR specialization='Neurologist';
+SELECT * FROM `doctors` WHERE department_id
+ 		 IN (SELECT department_id FROM departments WHERE department_name IN ('Cardiology','Neurology'));
 -- Exercice 8
 SELECT * FROM `admissions` WHERE admission_date BETWEEN '2024-12-01' and '2024-12-07';
 -- Exercice 9
@@ -25,7 +26,7 @@ FROM patients;
 -- Exercice 10
 SELECT COUNT(*) FROM `appointments`;
 -- Exercice 11
-SELECT COUNT(*) FROM `doctors` GROUP BY specialization;
+SELECT department_id,COUNT(*) FROM `doctors` GROUP BY department_id;
 -- Exercice 12
 SELECT AVG(year(curdate())-year(date_of_birth)) FROM `patients`;
 -- Exercice 13
