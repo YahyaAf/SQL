@@ -116,3 +116,4 @@ INSERT INTO appointments (appointment_date, appointment_time, doctor_id, patient
 ('2024-02-01', '10:15:00', 8, 8, 'Urological Assessment'),
 ('2024-02-05', '12:00:00', 9, 9, 'Gynecological Appointment'),
 ('2024-02-10', '09:45:00', 10, 10, 'Mental Health Session');
+
