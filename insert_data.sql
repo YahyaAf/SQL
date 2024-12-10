@@ -105,3 +105,14 @@ INSERT INTO prescriptions (patient_id, doctor_id, medication_id, prescription_da
 (9, 9, 9, '2024-02-05', 'Take 1 tablet once a day for water retention'),
 (10, 10, 10, '2024-02-10', 'Take 1 tablet once a day with food');
 
+INSERT INTO appointments (appointment_date, appointment_time, doctor_id, patient_id, reason) VALUES
+('2024-01-10', '09:00:00', 1, 1, 'Routine Check-Up'),
+('2024-01-12', '11:00:00', 2, 2, 'Headache Consultation'),
+('2024-01-15', '14:00:00', 3, 3, 'Follow-up Oncological Treatment'),
+('2024-01-18', '10:30:00', 4, 4, 'Child Vaccination'),
+('2024-01-20', '15:00:00', 5, 5, 'Orthopedic Evaluation'),
+('2024-01-25', '08:30:00', 6, 6, 'Skin Allergy Treatment'),
+('2024-01-28', '13:00:00', 7, 7, 'Cardiology Consultation'),
+('2024-02-01', '10:15:00', 8, 8, 'Urological Assessment'),
+('2024-02-05', '12:00:00', 9, 9, 'Gynecological Appointment'),
+('2024-02-10', '09:45:00', 10, 10, 'Mental Health Session');
